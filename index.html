@@ -1,0 +1,920 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pushkar General Insurance | Insurance Advisors</title>
+
+<meta name="description"
+content="Pushkar General Insurance - Life Insurance, Health Insurance, Motor Insurance, Property Insurance, Fire Insurance, Travel Insurance and Group Insurance.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fc;
+    color: #172b4d;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #063b78, #0878d1);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #e9f5ff, white);
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.hero h1 {
+    color: #063b78;
+    font-size: 46px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #52657a;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 22px;
+    margin: 20px 5px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blue {
+    background: #0878d1;
+    color: white;
+}
+
+.green {
+    background: #16a34a;
+    color: white;
+}
+
+/* COMMON */
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #063b78;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #65758b;
+    margin-bottom: 30px;
+}
+
+/* SEARCH */
+
+.search-section {
+    background: white;
+}
+
+.search-box {
+    max-width: 750px;
+    margin: 25px auto;
+    display: flex;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 17px;
+    border: 2px solid #d7e2ef;
+    border-radius: 10px;
+    font-size: 17px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #0878d1;
+}
+
+.results {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+}
+
+/* CARDS */
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e3ebf4;
+}
+
+.card h3 {
+    color: #063b78;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.designation {
+    margin-bottom: 8px;
+    padding: 8px;
+    background: #edf6ff;
+    border-radius: 7px;
+    color: #174f87;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.phone {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.card-buttons {
+    margin-top: 15px;
+}
+
+/* SERVICES */
+
+.services {
+    background: #eef5fb;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 15px;
+}
+
+.service {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #dde7f1;
+    transition: 0.2s;
+}
+
+.service:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+}
+
+/* COMPANY */
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.company-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border-left: 5px solid #0878d1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.company-card h3 {
+    color: #063b78;
+    margin-bottom: 10px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: linear-gradient(135deg, #063b78, #0878d1);
+    color: white;
+    text-align: center;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.contact p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #061c35;
+    color: #d9e6f5;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navbar a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+Pushkar General Insurance
+</div>
+
+<div>
+<a href="#search">Search</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+Complete Insurance Solutions
+</h1>
+
+<p>
+Find insurance advisors, insurance companies, professional profiles
+and insurance services — all in one place.
+</p>
+
+<a class="button blue" href="#search">
+🔎 Search Advisor
+</a>
+
+<a class="button green"
+href="https://wa.me/919404461767"
+target="_blank">
+💬 WhatsApp
+</a>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<section id="search" class="search-section">
+
+<div class="container">
+
+<h2 class="section-title">
+Search Insurance Advisor
+</h2>
+
+<p class="section-subtitle">
+Search advisor name, insurance company or designation.
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Example: Preeti Vikas Bhattad"
+onkeyup="searchAdvisor()">
+
+</div>
+
+<div id="results" class="results"></div>
+
+</div>
+
+</section>
+
+
+<!-- ADVISORS -->
+
+<section class="container">
+
+<h2 class="section-title">
+Our Insurance Advisors
+</h2>
+
+<p class="section-subtitle">
+Professional insurance assistance for individuals, families and businesses.
+</p>
+
+<div class="company-grid">
+
+
+<div class="company-card">
+
+<h3>
+PREETI VIKAS BHATTAD
+</h3>
+
+<p>
+<strong>Niva Bupa Health Insurance</strong><br>
+Pinnacle Advisor
+</p>
+
+<br>
+
+<p>
+<strong>HDFC Life Insurance</strong><br>
+Premier Financial Consultant
+</p>
+
+<br>
+
+<p>
+<strong>SBI General Insurance</strong><br>
+Advisor
+</p>
+
+<br>
+
+<strong>📞 9404461767</strong>
+
+</div>
+
+
+<div class="company-card">
+
+<h3>
+VIKAS NANDHKISHOR BHATTAD
+</h3>
+
+<p>
+<strong>Tata AIA Life Insurance</strong><br>
+Senior Life Planner
+</p>
+
+<br>
+
+<p>
+<strong>Niva Bupa Health Insurance</strong><br>
+Financial Consultant
+</p>
+
+<br>
+
+<p>
+<strong>IFFCO Tokio General Insurance</strong><br>
+Advisor
+</p>
+
+<br>
+
+<strong>📞 9404461767 / 8329320543</strong>
+
+</div>
+
+
+<div class="company-card">
+
+<h3>
+BHAVESHKUMAR MADHUSUDAN CHANDAK
+</h3>
+
+<p>
+<strong>Niva Bupa Health Insurance</strong><br>
+Insurance Consultant
+</p>
+
+<br>
+
+<p>
+<strong>HDFC Life Insurance</strong><br>
+Insurance Consultant
+</p>
+
+<br>
+
+<strong>📞 8767595440</strong>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services" class="services">
+
+<div class="container">
+
+<h2 class="section-title">
+Insurance Services
+</h2>
+
+<p class="section-subtitle">
+We provide assistance for various insurance requirements.
+</p>
+
+<div class="service-grid">
+
+<div class="service">Life Insurance</div>
+
+<div class="service">Health Insurance</div>
+
+<div class="service">Four Wheeler Insurance</div>
+
+<div class="service">Two Wheeler Insurance</div>
+
+<div class="service">Tractor Insurance</div>
+
+<div class="service">Jeep Insurance</div>
+
+<div class="service">Pickup Insurance</div>
+
+<div class="service">Tata Ace Insurance</div>
+
+<div class="service">Truck Insurance</div>
+
+<div class="service">Property Insurance</div>
+
+<div class="service">Shop Insurance</div>
+
+<div class="service">Godown Insurance</div>
+
+<div class="service">Fire Insurance</div>
+
+<div class="service">Travel Insurance</div>
+
+<div class="service">Group Insurance</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COMPANIES -->
+
+<section class="container">
+
+<h2 class="section-title">
+Insurance Companies
+</h2>
+
+<p class="section-subtitle">
+Our advisors are associated with various insurance companies in different professional capacities.
+</p>
+
+<div class="company-grid">
+
+
+<div class="company-card">
+
+<h3>Niva Bupa Health Insurance</h3>
+
+<p>
+Preeti Vikas Bhattad — Pinnacle Advisor
+</p>
+
+<p>
+Vikas Nandhkishor Bhattad — Financial Consultant
+</p>
+
+<p>
+Bhaveshkumar Madhusudan Chandak — Insurance Consultant
+</p>
+
+</div>
+
+
+<div class="company-card">
+
+<h3>HDFC Life Insurance</h3>
+
+<p>
+Preeti Vikas Bhattad — Premier Financial Consultant
+</p>
+
+<p>
+Bhaveshkumar Madhusudan Chandak — Insurance Consultant
+</p>
+
+</div>
+
+
+<div class="company-card">
+
+<h3>Tata AIA Life Insurance</h3>
+
+<p>
+Vikas Nandhkishor Bhattad — Senior Life Planner
+</p>
+
+</div>
+
+
+<div class="company-card">
+
+<h3>SBI General Insurance</h3>
+
+<p>
+Preeti Vikas Bhattad — Advisor
+</p>
+
+</div>
+
+
+<div class="company-card">
+
+<h3>IFFCO Tokio General Insurance</h3>
+
+<p>
+Vikas Nandhkishor Bhattad — Advisor
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Contact Us
+</h2>
+
+<p>
+
+<strong>Pushkar General Insurance</strong>
+
+<br>
+
+Mobansi Atta Chachkhi,
+Left Side Upper Office
+
+<br>
+
+<strong>24/7 Service Available</strong>
+
+</p>
+
+
+<a class="button green"
+href="https://wa.me/919404461767"
+target="_blank">
+
+💬 WhatsApp 9404461767
+
+</a>
+
+
+<br>
+
+
+<a class="button blue"
+href="tel:+919404461767">
+
+📞 9404461767
+
+</a>
+
+
+<a class="button blue"
+href="tel:+918767595440">
+
+📞 8767595440
+
+</a>
+
+
+<a class="button blue"
+href="tel:+918329320543">
+
+📞 8329320543
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Pushkar General Insurance
+
+<br><br>
+
+Insurance services are subject to applicable insurer terms,
+conditions, eligibility and underwriting requirements.
+
+</footer>
+
+
+<script>
+
+const advisors = [
+
+{
+
+name:"PREETI VIKAS BHATTAD",
+
+roles:[
+
+"Niva Bupa Health Insurance — Pinnacle Advisor",
+
+"HDFC Life Insurance — Premier Financial Consultant",
+
+"SBI General Insurance — Advisor"
+
+],
+
+phone:["9404461767"]
+
+},
+
+{
+
+name:"VIKAS NANDHKISHOR BHATTAD",
+
+roles:[
+
+"Tata AIA Life Insurance — Senior Life Planner",
+
+"Niva Bupa Health Insurance — Financial Consultant",
+
+"IFFCO Tokio General Insurance — Advisor"
+
+],
+
+phone:["9404461767","8329320543"]
+
+},
+
+{
+
+name:"BHAVESHKUMAR MADHUSUDAN CHANDAK",
+
+roles:[
+
+"Niva Bupa Health Insurance — Insurance Consultant",
+
+"HDFC Life Insurance — Insurance Consultant"
+
+],
+
+phone:["8767595440"]
+
+}
+
+];
+
+
+function displayAdvisors(list)
+
+{
+
+const results =
+document.getElementById("results");
+
+results.innerHTML = "";
+
+
+if(list.length === 0)
+
+{
+
+results.innerHTML =
+
+"<p style='text-align:center;width:100%;color:#777;'>No advisor found. Please try another name.</p>";
+
+return;
+
+}
+
+
+list.forEach(advisor => {
+
+let rolesHTML = "";
+
+advisor.roles.forEach(role => {
+
+rolesHTML +=
+
+`<div class="designation">${role}</div>`;
+
+});
+
+
+let phonesHTML = "";
+
+advisor.phone.forEach(phone => {
+
+phonesHTML +=
+
+`
+
+<a class="button blue"
+
+href="tel:+91${phone}">
+
+📞 Call
+
+</a>
+
+<a class="button green"
+
+href="https://wa.me/91${phone}"
+
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+`;
+
+});
+
+
+results.innerHTML +=
+
+`
+
+<div class="card">
+
+<h3>${advisor.name}</h3>
+
+${rolesHTML}
+
+<div class="phone">
+
+Contact: ${advisor.phone.join(" / ")}
+
+</div>
+
+<div class="card-buttons">
+
+${phonesHTML}
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+
+function searchAdvisor()
+
+{
+
+const query =
+
+document
+
+.getElementById("searchInput")
+
+.value
+
+.toLowerCase()
+
+.trim();
+
+
+if(query === "")
+
+{
+
+displayAdvisors(advisors);
+
+return;
+
+}
+
+
+const filtered = advisors.filter(advisor =>
+
+{
+
+let data =
+
+advisor.name +
+
+" " +
+
+advisor.roles.join(" ");
+
+return data.toLowerCase().includes(query);
+
+});
+
+
+displayAdvisors(filtered);
+
+}
+
+
+displayAdvisors(advisors);
+
+</script>
+
+</body>
+
+</html>
+```
